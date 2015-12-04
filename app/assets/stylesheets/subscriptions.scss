@@ -1,0 +1,28 @@
+// Place all the styles related to the Subscriptions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: Helvetica;
+}
+.product_tile {
+  display: inline-block;
+  margin-right: 15px;
+}
+#subscript_heading {
+  width: 29%;
+  margin: 15px auto;
+  font-weight: normal;
+  text-align: justify;
+}
+
+#frequency_submit {
+  margin-top: 50px;
+  margin-right: 250px;
+  margin-left: auto;
+  width: 100px;
+  button {
+    padding: 20px 50px;
+  }
+}
+

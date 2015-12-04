@@ -1,0 +1,27 @@
+<h1 id=subscript_heading>Sign up for a subscription</h1>
+
+
+<% @products.each do |product| %>
+  <div class="product_tile">
+    <img height=150 width=200 src="<%= product.image_url %>">
+    <h4>
+    <%= product.name %>
+    </h4>
+    </p>
+    <p>
+    <%= product.description %>
+    </p>
+    <div>
+      <select id="product_<%=product.id%>_frequency">
+        <option value=0>Choose a Subscription</option>
+        <option value=2>One Bag Weekly</option>
+        <option value=3>Two Bags Weekly</option>
+        <option value=1>One Bag Every Two Weeks</option>
+      </select>
+    </div>
+  </div>
+<% end %>
+<div id="frequency_submit">
+  <button>Submit</button>
+</div>
+
