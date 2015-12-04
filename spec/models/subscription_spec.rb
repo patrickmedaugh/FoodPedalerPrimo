@@ -1,17 +1,22 @@
 require 'rails_helper'
 
 RSpec.describe Subscription, type: :model do
-  context 'with valid params' do
-    user = FactoryGirl.create(:user)
-    let(:subsription){
-      Subscription.new(user_id: user.id, frequency: 1)
+  context 'with associations' do
+    let(:user){
+      create(:user)
     }
-    it 'has users' do
-      expect(subscription.user_id).to eq(user.id)
+    let(:product){
+      create(:product)
+    }
+    let(:subscription){
+      Subscription.new(user_id: user.id, product_id: product.id, frequency: 1)
+    }
+    it 'returns the user id' do
+      expect(subscription.user).to eq(user)
     end
 
-    it 'has a product' do
-
+    it 'returns the product id' do
+      expect(subscription.product).to eq(product)
     end
   end
 end

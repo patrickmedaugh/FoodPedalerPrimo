@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before(:each) do
-    @user = Factory.create!(:user)
+    @user = create(:user)
   end
 
   it 'should create a new instance of a user' do
